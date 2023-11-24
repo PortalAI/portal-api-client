@@ -7,7 +7,6 @@ Name | Type | Description | Notes
 **id** | **str** |  | 
 **name** | **str** |  | 
 **description** | **str** |  | 
-**requirements** | **str** |  | 
 
 ## Example
 

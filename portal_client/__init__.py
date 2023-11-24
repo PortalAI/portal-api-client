@@ -14,7 +14,7 @@
 """  # noqa: E501
 
 
-__version__ = "1.0.3"
+__version__ = "1.0.4"
 
 # import apis into sdk package
 from portal_client.api.agents_api import AgentsApi

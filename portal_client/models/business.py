@@ -32,8 +32,7 @@ class Business(BaseModel):
     id: StrictStr
     name: StrictStr
     description: StrictStr
-    requirements: StrictStr
-    __properties: ClassVar[List[str]] = ["id", "name", "description", "requirements"]
+    __properties: ClassVar[List[str]] = ["id", "name", "description"]
 
     model_config = {
         "populate_by_name": True,
@@ -85,8 +84,7 @@ class Business(BaseModel):
         _obj = cls.model_validate({
             "id": obj.get("id"),
             "name": obj.get("name"),
-            "description": obj.get("description"),
-            "requirements": obj.get("requirements")
+            "description": obj.get("description")
         })
         return _obj
 
