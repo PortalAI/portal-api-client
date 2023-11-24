@@ -20,6 +20,7 @@ from portal_client.models.alert import Alert
 from portal_client.models.alert_status import AlertStatus
 from portal_client.models.business import Business
 from portal_client.models.business_response import BusinessResponse
+from portal_client.models.create_business_request import CreateBusinessRequest
 from portal_client.models.create_onboarding_request import CreateOnboardingRequest
 from portal_client.models.create_routine_request import CreateRoutineRequest
 from portal_client.models.dashboard import Dashboard

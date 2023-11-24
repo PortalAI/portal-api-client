@@ -12,6 +12,7 @@ docs/AlertsApi.md
 docs/Business.md
 docs/BusinessApi.md
 docs/BusinessResponse.md
+docs/CreateBusinessRequest.md
 docs/CreateOnboardingRequest.md
 docs/CreateRoutineRequest.md
 docs/Dashboard.md
@@ -77,6 +78,7 @@ portal_client/models/alert.py
 portal_client/models/alert_status.py
 portal_client/models/business.py
 portal_client/models/business_response.py
+portal_client/models/create_business_request.py
 portal_client/models/create_onboarding_request.py
 portal_client/models/create_routine_request.py
 portal_client/models/dashboard.py
@@ -119,4 +121,5 @@ setup.cfg
 setup.py
 test-requirements.txt
 test/__init__.py
+test/test_create_business_request.py
 tox.ini
