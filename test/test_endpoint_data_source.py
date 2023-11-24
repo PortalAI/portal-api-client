@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.endpoint_data_source import EndpointDataSource
+from portal_client.portal_client.endpoint_data_source import EndpointDataSource
 
 class TestEndpointDataSource(unittest.TestCase):
     """EndpointDataSource unit test stubs"""

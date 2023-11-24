@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.api.agents_api import AgentsApi
+from portal_client.agents_api import AgentsApi
 
 
 class TestAgentsApi(unittest.TestCase):

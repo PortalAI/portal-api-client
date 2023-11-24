@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.create_routine_request import CreateRoutineRequest
+from portal_client.portal_client.create_routine_request import CreateRoutineRequest
 
 # TODO update the JSON string below
 json = "{}"

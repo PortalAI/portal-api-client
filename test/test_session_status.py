@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.session_status import SessionStatus
+from portal_client.portal_client.session_status import SessionStatus
 
 class TestSessionStatus(unittest.TestCase):
     """SessionStatus unit test stubs"""

@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.update_session_from_text_request import UpdateSessionFromTextRequest
+from portal_client.portal_client.update_session_from_text_request import UpdateSessionFromTextRequest
 
 # TODO update the JSON string below
 json = "{}"

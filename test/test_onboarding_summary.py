@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.onboarding_summary import OnboardingSummary
+from portal_client.portal_client.onboarding_summary import OnboardingSummary
 
 class TestOnboardingSummary(unittest.TestCase):
     """OnboardingSummary unit test stubs"""
@@ -36,80 +36,80 @@ class TestOnboardingSummary(unittest.TestCase):
         model = OnboardingSummary()
         if include_optional:
             return OnboardingSummary(
-                business = openapi_client.models.business.Business(
+                business = portal_client.models.business.Business(
                     id = '', 
                     name = '', 
                     description = '', 
                     requirements = '', ),
                 routines = [
-                    openapi_client.models.routine.Routine(
+                    portal_client.models.routine.Routine(
                         id = '', 
                         agent_id = '', 
                         name = '', 
                         requirements = '', 
                         interval = '', 
-                        trend = openapi_client.models.trend.Trend(
+                        trend = portal_client.models.trend.Trend(
                             description = '', 
                             status = 'POSITIVE', ), 
-                        data_source = openapi_client.models.data_source.DataSource(
+                        data_source = portal_client.models.data_source.DataSource(
                             endpoints = [
-                                openapi_client.models.endpoint_data_source.EndpointDataSource(
+                                portal_client.models.endpoint_data_source.EndpointDataSource(
                                     url = '', 
                                     method = '', 
                                     description = '', )
                                 ], 
                             sql_tables = [
-                                openapi_client.models.sql_tables_data_source.SqlTablesDataSource(
+                                portal_client.models.sql_tables_data_source.SqlTablesDataSource(
                                     connection_string = '', 
                                     table_name = '', )
                                 ], 
                             google_tables = [
-                                openapi_client.models.google_table_data_source.GoogleTableDataSource(
+                                portal_client.models.google_table_data_source.GoogleTableDataSource(
                                     spreadsheet_id = '', 
                                     sheet_name = '', )
                                 ], 
                             local_files = [
-                                openapi_client.models.local_file_data_source.LocalFileDataSource(
+                                portal_client.models.local_file_data_source.LocalFileDataSource(
                                     path = '', )
                                 ], ), )
                     ]
             )
         else:
             return OnboardingSummary(
-                business = openapi_client.models.business.Business(
+                business = portal_client.models.business.Business(
                     id = '', 
                     name = '', 
                     description = '', 
                     requirements = '', ),
                 routines = [
-                    openapi_client.models.routine.Routine(
+                    portal_client.models.routine.Routine(
                         id = '', 
                         agent_id = '', 
                         name = '', 
                         requirements = '', 
                         interval = '', 
-                        trend = openapi_client.models.trend.Trend(
+                        trend = portal_client.models.trend.Trend(
                             description = '', 
                             status = 'POSITIVE', ), 
-                        data_source = openapi_client.models.data_source.DataSource(
+                        data_source = portal_client.models.data_source.DataSource(
                             endpoints = [
-                                openapi_client.models.endpoint_data_source.EndpointDataSource(
+                                portal_client.models.endpoint_data_source.EndpointDataSource(
                                     url = '', 
                                     method = '', 
                                     description = '', )
                                 ], 
                             sql_tables = [
-                                openapi_client.models.sql_tables_data_source.SqlTablesDataSource(
+                                portal_client.models.sql_tables_data_source.SqlTablesDataSource(
                                     connection_string = '', 
                                     table_name = '', )
                                 ], 
                             google_tables = [
-                                openapi_client.models.google_table_data_source.GoogleTableDataSource(
+                                portal_client.models.google_table_data_source.GoogleTableDataSource(
                                     spreadsheet_id = '', 
                                     sheet_name = '', )
                                 ], 
                             local_files = [
-                                openapi_client.models.local_file_data_source.LocalFileDataSource(
+                                portal_client.models.local_file_data_source.LocalFileDataSource(
                                     path = '', )
                                 ], ), )
                     ],

@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.session_summary import SessionSummary
+from portal_client.portal_client.session_summary import SessionSummary
 
 class TestSessionSummary(unittest.TestCase):
     """SessionSummary unit test stubs"""
@@ -37,7 +37,7 @@ class TestSessionSummary(unittest.TestCase):
         if include_optional:
             return SessionSummary(
                 id = '',
-                agent = openapi_client.models.agent.Agent(
+                agent = portal_client.models.agent.Agent(
                     id = '', 
                     name = '', 
                     assistant_id = '', 
@@ -54,7 +54,7 @@ class TestSessionSummary(unittest.TestCase):
         else:
             return SessionSummary(
                 id = '',
-                agent = openapi_client.models.agent.Agent(
+                agent = portal_client.models.agent.Agent(
                     id = '', 
                     name = '', 
                     assistant_id = '', 

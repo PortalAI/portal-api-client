@@ -1,4 +1,4 @@
-# openapi_client.RoutinesApi
+# portal_client.RoutinesApi
 
 All URIs are relative to *http://localhost*
 
@@ -21,24 +21,24 @@ Create Routine
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.create_routine_request import CreateRoutineRequest
-from openapi_client.models.routine import Routine
-from openapi_client.rest import ApiException
+import portal_client
+from portal_client.models.create_routine_request import CreateRoutineRequest
+from portal_client.models.routine import Routine
+from portal_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = portal_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with portal_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.RoutinesApi(api_client)
-    create_routine_request = openapi_client.CreateRoutineRequest() # CreateRoutineRequest | 
+    api_instance = portal_client.RoutinesApi(api_client)
+    create_routine_request = portal_client.CreateRoutineRequest() # CreateRoutineRequest | 
 
     try:
         # Create Routine
@@ -88,22 +88,22 @@ Delete Routine
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.routines_response import RoutinesResponse
-from openapi_client.rest import ApiException
+import portal_client
+from portal_client.models.routines_response import RoutinesResponse
+from portal_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = portal_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with portal_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.RoutinesApi(api_client)
+    api_instance = portal_client.RoutinesApi(api_client)
     routine_id = 'routine_id_example' # str | 
 
     try:
@@ -154,22 +154,22 @@ Get Routines
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.routines_response import RoutinesResponse
-from openapi_client.rest import ApiException
+import portal_client
+from portal_client.models.routines_response import RoutinesResponse
+from portal_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = portal_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with portal_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.RoutinesApi(api_client)
+    api_instance = portal_client.RoutinesApi(api_client)
     agent_id = 'agent_id_example' # str | 
 
     try:
@@ -220,22 +220,22 @@ Run Async Routine
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.routines_response import RoutinesResponse
-from openapi_client.rest import ApiException
+import portal_client
+from portal_client.models.routines_response import RoutinesResponse
+from portal_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = portal_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with portal_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.RoutinesApi(api_client)
+    api_instance = portal_client.RoutinesApi(api_client)
     routine_id = 'routine_id_example' # str | 
 
     try:
@@ -286,22 +286,22 @@ Run Routine
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.routines_response import RoutinesResponse
-from openapi_client.rest import ApiException
+import portal_client
+from portal_client.models.routines_response import RoutinesResponse
+from portal_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = portal_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with portal_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.RoutinesApi(api_client)
+    api_instance = portal_client.RoutinesApi(api_client)
     routine_id = 'routine_id_example' # str | 
 
     try:

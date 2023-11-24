@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.user_answer import UserAnswer
+from portal_client.portal_client.user_answer import UserAnswer
 
 class TestUserAnswer(unittest.TestCase):
     """UserAnswer unit test stubs"""

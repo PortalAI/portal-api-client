@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.alert import Alert
+from portal_client.portal_client.alert import Alert
 
 class TestAlert(unittest.TestCase):
     """Alert unit test stubs"""
@@ -39,7 +39,7 @@ class TestAlert(unittest.TestCase):
                 id = '',
                 insight = '',
                 notifications = [
-                    openapi_client.models.notification.Notification(
+                    portal_client.models.notification.Notification(
                         channel = '', )
                     ],
                 status = 'OK',
@@ -52,7 +52,7 @@ class TestAlert(unittest.TestCase):
                 id = '',
                 insight = '',
                 notifications = [
-                    openapi_client.models.notification.Notification(
+                    portal_client.models.notification.Notification(
                         channel = '', )
                     ],
                 status = 'OK',

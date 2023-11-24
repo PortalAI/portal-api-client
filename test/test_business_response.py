@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.business_response import BusinessResponse
+from portal_client.portal_client.business_response import BusinessResponse
 
 class TestBusinessResponse(unittest.TestCase):
     """BusinessResponse unit test stubs"""
@@ -36,7 +36,7 @@ class TestBusinessResponse(unittest.TestCase):
         model = BusinessResponse()
         if include_optional:
             return BusinessResponse(
-                business = openapi_client.models.business.Business(
+                business = portal_client.models.business.Business(
                     id = '', 
                     name = '', 
                     description = '', 
@@ -44,7 +44,7 @@ class TestBusinessResponse(unittest.TestCase):
             )
         else:
             return BusinessResponse(
-                business = openapi_client.models.business.Business(
+                business = portal_client.models.business.Business(
                     id = '', 
                     name = '', 
                     description = '', 

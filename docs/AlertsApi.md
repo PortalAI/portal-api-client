@@ -1,4 +1,4 @@
-# openapi_client.AlertsApi
+# portal_client.AlertsApi
 
 All URIs are relative to *http://localhost*
 
@@ -19,23 +19,23 @@ Create Alert
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.alert import Alert
-from openapi_client.rest import ApiException
+import portal_client
+from portal_client.models.alert import Alert
+from portal_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = portal_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with portal_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.AlertsApi(api_client)
-    alert = openapi_client.Alert() # Alert | 
+    api_instance = portal_client.AlertsApi(api_client)
+    alert = portal_client.Alert() # Alert | 
 
     try:
         # Create Alert
@@ -85,22 +85,22 @@ Get Alerts
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.alert import Alert
-from openapi_client.rest import ApiException
+import portal_client
+from portal_client.models.alert import Alert
+from portal_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = portal_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with portal_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.AlertsApi(api_client)
+    api_instance = portal_client.AlertsApi(api_client)
 
     try:
         # Get Alerts
@@ -146,24 +146,24 @@ Update Alert
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.alert import Alert
-from openapi_client.rest import ApiException
+import portal_client
+from portal_client.models.alert import Alert
+from portal_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = portal_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with portal_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.AlertsApi(api_client)
+    api_instance = portal_client.AlertsApi(api_client)
     alert_id = 'alert_id_example' # str | 
-    alert = openapi_client.Alert() # Alert | 
+    alert = portal_client.Alert() # Alert | 
 
     try:
         # Update Alert

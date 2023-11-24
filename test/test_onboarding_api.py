@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.api.onboarding_api import OnboardingApi
+from portal_client.onboarding_api import OnboardingApi
 
 
 class TestOnboardingApi(unittest.TestCase):

@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.onboarding_process import OnboardingProcess
+from portal_client.portal_client.onboarding_process import OnboardingProcess
 
 class TestOnboardingProcess(unittest.TestCase):
     """OnboardingProcess unit test stubs"""
@@ -37,7 +37,7 @@ class TestOnboardingProcess(unittest.TestCase):
         if include_optional:
             return OnboardingProcess(
                 id = '',
-                answer = openapi_client.models.message.Message(
+                answer = portal_client.models.message.Message(
                     text = '', 
                     role = 'user', ),
                 is_completed = True
@@ -45,7 +45,7 @@ class TestOnboardingProcess(unittest.TestCase):
         else:
             return OnboardingProcess(
                 id = '',
-                answer = openapi_client.models.message.Message(
+                answer = portal_client.models.message.Message(
                     text = '', 
                     role = 'user', ),
                 is_completed = True,

@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.validation_error import ValidationError
+from portal_client.portal_client.validation_error import ValidationError
 
 class TestValidationError(unittest.TestCase):
     """ValidationError unit test stubs"""

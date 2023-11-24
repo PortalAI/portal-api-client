@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.routine_with_sessions import RoutineWithSessions
+from portal_client.portal_client.routine_with_sessions import RoutineWithSessions
 
 class TestRoutineWithSessions(unittest.TestCase):
     """RoutineWithSessions unit test stubs"""
@@ -41,38 +41,38 @@ class TestRoutineWithSessions(unittest.TestCase):
                 name = '',
                 requirements = '',
                 interval = '',
-                trend = openapi_client.models.trend.Trend(
+                trend = portal_client.models.trend.Trend(
                     description = '', 
                     status = 'POSITIVE', ),
-                data_source = openapi_client.models.data_source.DataSource(
+                data_source = portal_client.models.data_source.DataSource(
                     endpoints = [
-                        openapi_client.models.endpoint_data_source.EndpointDataSource(
+                        portal_client.models.endpoint_data_source.EndpointDataSource(
                             url = '', 
                             method = '', 
                             description = '', )
                         ], 
                     sql_tables = [
-                        openapi_client.models.sql_tables_data_source.SqlTablesDataSource(
+                        portal_client.models.sql_tables_data_source.SqlTablesDataSource(
                             connection_string = '', 
                             table_name = '', )
                         ], 
                     google_tables = [
-                        openapi_client.models.google_table_data_source.GoogleTableDataSource(
+                        portal_client.models.google_table_data_source.GoogleTableDataSource(
                             spreadsheet_id = '', 
                             sheet_name = '', )
                         ], 
                     local_files = [
-                        openapi_client.models.local_file_data_source.LocalFileDataSource(
+                        portal_client.models.local_file_data_source.LocalFileDataSource(
                             path = '', )
                         ], ),
                 sessions = [
-                    openapi_client.models.session.Session(
+                    portal_client.models.session.Session(
                         id = '', 
                         agent_id = '', 
                         created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                         updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                         messages = [
-                            openapi_client.models.message.Message(
+                            portal_client.models.message.Message(
                                 text = '', 
                                 role = 'user', )
                             ], 
@@ -88,38 +88,38 @@ class TestRoutineWithSessions(unittest.TestCase):
                 name = '',
                 requirements = '',
                 interval = '',
-                trend = openapi_client.models.trend.Trend(
+                trend = portal_client.models.trend.Trend(
                     description = '', 
                     status = 'POSITIVE', ),
-                data_source = openapi_client.models.data_source.DataSource(
+                data_source = portal_client.models.data_source.DataSource(
                     endpoints = [
-                        openapi_client.models.endpoint_data_source.EndpointDataSource(
+                        portal_client.models.endpoint_data_source.EndpointDataSource(
                             url = '', 
                             method = '', 
                             description = '', )
                         ], 
                     sql_tables = [
-                        openapi_client.models.sql_tables_data_source.SqlTablesDataSource(
+                        portal_client.models.sql_tables_data_source.SqlTablesDataSource(
                             connection_string = '', 
                             table_name = '', )
                         ], 
                     google_tables = [
-                        openapi_client.models.google_table_data_source.GoogleTableDataSource(
+                        portal_client.models.google_table_data_source.GoogleTableDataSource(
                             spreadsheet_id = '', 
                             sheet_name = '', )
                         ], 
                     local_files = [
-                        openapi_client.models.local_file_data_source.LocalFileDataSource(
+                        portal_client.models.local_file_data_source.LocalFileDataSource(
                             path = '', )
                         ], ),
                 sessions = [
-                    openapi_client.models.session.Session(
+                    portal_client.models.session.Session(
                         id = '', 
                         agent_id = '', 
                         created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                         updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                         messages = [
-                            openapi_client.models.message.Message(
+                            portal_client.models.message.Message(
                                 text = '', 
                                 role = 'user', )
                             ], 

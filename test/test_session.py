@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.session import Session
+from portal_client.portal_client.session import Session
 
 class TestSession(unittest.TestCase):
     """Session unit test stubs"""
@@ -41,7 +41,7 @@ class TestSession(unittest.TestCase):
                 created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'),
                 updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'),
                 messages = [
-                    openapi_client.models.message.Message(
+                    portal_client.models.message.Message(
                         text = '', 
                         role = 'user', )
                     ],
@@ -55,7 +55,7 @@ class TestSession(unittest.TestCase):
                 created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'),
                 updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'),
                 messages = [
-                    openapi_client.models.message.Message(
+                    portal_client.models.message.Message(
                         text = '', 
                         role = 'user', )
                     ],

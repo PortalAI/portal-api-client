@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.user_answer import UserAnswer
+from portal_client.portal_client.user_answer import UserAnswer
 
 # TODO update the JSON string below
 json = "{}"

@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.google_table_data_source import GoogleTableDataSource
+from portal_client.portal_client.google_table_data_source import GoogleTableDataSource
 
 # TODO update the JSON string below
 json = "{}"

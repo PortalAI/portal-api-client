@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.widget import Widget
+from portal_client.portal_client.widget import Widget
 
 # TODO update the JSON string below
 json = "{}"

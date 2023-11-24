@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.local_file_data_source import LocalFileDataSource
+from portal_client.portal_client.local_file_data_source import LocalFileDataSource
 
 # TODO update the JSON string below
 json = "{}"

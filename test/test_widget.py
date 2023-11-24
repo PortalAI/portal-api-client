@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.widget import Widget
+from portal_client.portal_client.widget import Widget
 
 class TestWidget(unittest.TestCase):
     """Widget unit test stubs"""
@@ -36,7 +36,7 @@ class TestWidget(unittest.TestCase):
         model = Widget()
         if include_optional:
             return Widget(
-                agent = openapi_client.models.agent.Agent(
+                agent = portal_client.models.agent.Agent(
                     id = '', 
                     name = '', 
                     assistant_id = '', 
@@ -47,13 +47,13 @@ class TestWidget(unittest.TestCase):
                     visibility_requirements = [
                         ''
                         ], ),
-                latest_session = openapi_client.models.session.Session(
+                latest_session = portal_client.models.session.Session(
                     id = '', 
                     agent_id = '', 
                     created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                     updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                     messages = [
-                        openapi_client.models.message.Message(
+                        portal_client.models.message.Message(
                             text = '', 
                             role = 'user', )
                         ], 
@@ -62,7 +62,7 @@ class TestWidget(unittest.TestCase):
             )
         else:
             return Widget(
-                agent = openapi_client.models.agent.Agent(
+                agent = portal_client.models.agent.Agent(
                     id = '', 
                     name = '', 
                     assistant_id = '', 
@@ -73,13 +73,13 @@ class TestWidget(unittest.TestCase):
                     visibility_requirements = [
                         ''
                         ], ),
-                latest_session = openapi_client.models.session.Session(
+                latest_session = portal_client.models.session.Session(
                     id = '', 
                     agent_id = '', 
                     created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                     updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                     messages = [
-                        openapi_client.models.message.Message(
+                        portal_client.models.message.Message(
                             text = '', 
                             role = 'user', )
                         ], 

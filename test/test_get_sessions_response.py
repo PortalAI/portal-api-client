@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.get_sessions_response import GetSessionsResponse
+from portal_client.portal_client.get_sessions_response import GetSessionsResponse
 
 class TestGetSessionsResponse(unittest.TestCase):
     """GetSessionsResponse unit test stubs"""
@@ -37,13 +37,13 @@ class TestGetSessionsResponse(unittest.TestCase):
         if include_optional:
             return GetSessionsResponse(
                 sessions = [
-                    openapi_client.models.session.Session(
+                    portal_client.models.session.Session(
                         id = '', 
                         agent_id = '', 
                         created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                         updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                         messages = [
-                            openapi_client.models.message.Message(
+                            portal_client.models.message.Message(
                                 text = '', 
                                 role = 'user', )
                             ], 
@@ -54,13 +54,13 @@ class TestGetSessionsResponse(unittest.TestCase):
         else:
             return GetSessionsResponse(
                 sessions = [
-                    openapi_client.models.session.Session(
+                    portal_client.models.session.Session(
                         id = '', 
                         agent_id = '', 
                         created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                         updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                         messages = [
-                            openapi_client.models.message.Message(
+                            portal_client.models.message.Message(
                                 text = '', 
                                 role = 'user', )
                             ], 

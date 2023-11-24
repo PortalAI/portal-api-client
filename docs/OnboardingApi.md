@@ -1,4 +1,4 @@
-# openapi_client.OnboardingApi
+# portal_client.OnboardingApi
 
 All URIs are relative to *http://localhost*
 
@@ -19,24 +19,24 @@ Create Onboarding
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.create_onboarding_request import CreateOnboardingRequest
-from openapi_client.models.onboarding_process import OnboardingProcess
-from openapi_client.rest import ApiException
+import portal_client
+from portal_client.models.create_onboarding_request import CreateOnboardingRequest
+from portal_client.models.onboarding_process import OnboardingProcess
+from portal_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = portal_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with portal_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.OnboardingApi(api_client)
-    create_onboarding_request = openapi_client.CreateOnboardingRequest() # CreateOnboardingRequest | 
+    api_instance = portal_client.OnboardingApi(api_client)
+    create_onboarding_request = portal_client.CreateOnboardingRequest() # CreateOnboardingRequest | 
 
     try:
         # Create Onboarding
@@ -86,22 +86,22 @@ Summarize
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.onboarding_summary import OnboardingSummary
-from openapi_client.rest import ApiException
+import portal_client
+from portal_client.models.onboarding_summary import OnboardingSummary
+from portal_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = portal_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with portal_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.OnboardingApi(api_client)
+    api_instance = portal_client.OnboardingApi(api_client)
     onboarding_id = 'onboarding_id_example' # str | 
 
     try:
@@ -152,25 +152,25 @@ Update Onboarding
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.onboarding_process import OnboardingProcess
-from openapi_client.models.user_answer import UserAnswer
-from openapi_client.rest import ApiException
+import portal_client
+from portal_client.models.onboarding_process import OnboardingProcess
+from portal_client.models.user_answer import UserAnswer
+from portal_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = portal_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with portal_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.OnboardingApi(api_client)
+    api_instance = portal_client.OnboardingApi(api_client)
     onboarding_id = 'onboarding_id_example' # str | 
-    user_answer = openapi_client.UserAnswer() # UserAnswer | 
+    user_answer = portal_client.UserAnswer() # UserAnswer | 
 
     try:
         # Update Onboarding

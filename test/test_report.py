@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.report import Report
+from portal_client.portal_client.report import Report
 
 class TestReport(unittest.TestCase):
     """Report unit test stubs"""
@@ -38,15 +38,15 @@ class TestReport(unittest.TestCase):
             return Report(
                 text = '',
                 tables = [
-                    openapi_client.models.report_table.ReportTable(
+                    portal_client.models.report_table.ReportTable(
                         title = '', 
                         columns = [
                             ''
                             ], 
                         rows = [
-                            openapi_client.models.report_row.ReportRow(
+                            portal_client.models.report_row.ReportRow(
                                 values = [
-                                    openapi_client.models.report_value.ReportValue(
+                                    portal_client.models.report_value.ReportValue(
                                         key = '', 
                                         text = '', 
                                         link = '', )

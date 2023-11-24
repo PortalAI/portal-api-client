@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.validation_error_loc_inner import ValidationErrorLocInner
+from portal_client.portal_client.validation_error_loc_inner import ValidationErrorLocInner
 
 # TODO update the JSON string below
 json = "{}"

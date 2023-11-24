@@ -1,4 +1,4 @@
-# openapi_client.BusinessApi
+# portal_client.BusinessApi
 
 All URIs are relative to *http://localhost*
 
@@ -19,22 +19,22 @@ Delete Business
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.delete_business_response import DeleteBusinessResponse
-from openapi_client.rest import ApiException
+import portal_client
+from portal_client.models.delete_business_response import DeleteBusinessResponse
+from portal_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = portal_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with portal_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.BusinessApi(api_client)
+    api_instance = portal_client.BusinessApi(api_client)
     business_id = 'business_id_example' # str | 
 
     try:
@@ -85,22 +85,22 @@ Get Business
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.business_response import BusinessResponse
-from openapi_client.rest import ApiException
+import portal_client
+from portal_client.models.business_response import BusinessResponse
+from portal_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = portal_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with portal_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.BusinessApi(api_client)
+    api_instance = portal_client.BusinessApi(api_client)
 
     try:
         # Get Business
@@ -146,23 +146,23 @@ Update Business
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.business import Business
-from openapi_client.rest import ApiException
+import portal_client
+from portal_client.models.business import Business
+from portal_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = portal_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with portal_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.BusinessApi(api_client)
-    business = openapi_client.Business() # Business | 
+    api_instance = portal_client.BusinessApi(api_client)
+    business = portal_client.Business() # Business | 
 
     try:
         # Update Business

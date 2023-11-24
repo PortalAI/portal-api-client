@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.dashboard import Dashboard
+from portal_client.portal_client.dashboard import Dashboard
 
 class TestDashboard(unittest.TestCase):
     """Dashboard unit test stubs"""
@@ -37,8 +37,8 @@ class TestDashboard(unittest.TestCase):
         if include_optional:
             return Dashboard(
                 widgets = [
-                    openapi_client.models.widget.Widget(
-                        agent = openapi_client.models.agent.Agent(
+                    portal_client.models.widget.Widget(
+                        agent = portal_client.models.agent.Agent(
                             id = '', 
                             name = '', 
                             assistant_id = '', 
@@ -49,13 +49,13 @@ class TestDashboard(unittest.TestCase):
                             visibility_requirements = [
                                 ''
                                 ], ), 
-                        latest_session = openapi_client.models.session.Session(
+                        latest_session = portal_client.models.session.Session(
                             id = '', 
                             agent_id = '', 
                             created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                             updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                             messages = [
-                                openapi_client.models.message.Message(
+                                portal_client.models.message.Message(
                                     text = '', 
                                     role = 'user', )
                                 ], 
@@ -66,8 +66,8 @@ class TestDashboard(unittest.TestCase):
         else:
             return Dashboard(
                 widgets = [
-                    openapi_client.models.widget.Widget(
-                        agent = openapi_client.models.agent.Agent(
+                    portal_client.models.widget.Widget(
+                        agent = portal_client.models.agent.Agent(
                             id = '', 
                             name = '', 
                             assistant_id = '', 
@@ -78,13 +78,13 @@ class TestDashboard(unittest.TestCase):
                             visibility_requirements = [
                                 ''
                                 ], ), 
-                        latest_session = openapi_client.models.session.Session(
+                        latest_session = portal_client.models.session.Session(
                             id = '', 
                             agent_id = '', 
                             created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                             updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                             messages = [
-                                openapi_client.models.message.Message(
+                                portal_client.models.message.Message(
                                     text = '', 
                                     role = 'user', )
                                 ], 

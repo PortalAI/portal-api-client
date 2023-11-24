@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.api.reports_api import ReportsApi
+from portal_client.reports_api import ReportsApi
 
 
 class TestReportsApi(unittest.TestCase):

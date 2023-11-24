@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.api.routines_api import RoutinesApi
+from portal_client.routines_api import RoutinesApi
 
 
 class TestRoutinesApi(unittest.TestCase):

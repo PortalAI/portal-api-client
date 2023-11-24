@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.agents_response import AgentsResponse
+from portal_client.portal_client.agents_response import AgentsResponse
 
 class TestAgentsResponse(unittest.TestCase):
     """AgentsResponse unit test stubs"""
@@ -37,7 +37,7 @@ class TestAgentsResponse(unittest.TestCase):
         if include_optional:
             return AgentsResponse(
                 agents = [
-                    openapi_client.models.agent.Agent(
+                    portal_client.models.agent.Agent(
                         id = '', 
                         name = '', 
                         assistant_id = '', 
@@ -53,7 +53,7 @@ class TestAgentsResponse(unittest.TestCase):
         else:
             return AgentsResponse(
                 agents = [
-                    openapi_client.models.agent.Agent(
+                    portal_client.models.agent.Agent(
                         id = '', 
                         name = '', 
                         assistant_id = '', 

@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.onboarding_process import OnboardingProcess
+from portal_client.portal_client.onboarding_process import OnboardingProcess
 
 # TODO update the JSON string below
 json = "{}"

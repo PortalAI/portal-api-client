@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.routine import Routine
+from portal_client.portal_client.routine import Routine
 
 # TODO update the JSON string below
 json = "{}"

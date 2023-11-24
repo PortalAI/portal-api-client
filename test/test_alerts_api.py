@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.api.alerts_api import AlertsApi
+from portal_client.alerts_api import AlertsApi
 
 
 class TestAlertsApi(unittest.TestCase):

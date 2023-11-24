@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.google_table_data_source import GoogleTableDataSource
+from portal_client.portal_client.google_table_data_source import GoogleTableDataSource
 
 class TestGoogleTableDataSource(unittest.TestCase):
     """GoogleTableDataSource unit test stubs"""

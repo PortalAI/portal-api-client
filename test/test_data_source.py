@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.data_source import DataSource
+from portal_client.portal_client.data_source import DataSource
 
 class TestDataSource(unittest.TestCase):
     """DataSource unit test stubs"""
@@ -37,23 +37,23 @@ class TestDataSource(unittest.TestCase):
         if include_optional:
             return DataSource(
                 endpoints = [
-                    openapi_client.models.endpoint_data_source.EndpointDataSource(
+                    portal_client.models.endpoint_data_source.EndpointDataSource(
                         url = '', 
                         method = '', 
                         description = '', )
                     ],
                 sql_tables = [
-                    openapi_client.models.sql_tables_data_source.SqlTablesDataSource(
+                    portal_client.models.sql_tables_data_source.SqlTablesDataSource(
                         connection_string = '', 
                         table_name = '', )
                     ],
                 google_tables = [
-                    openapi_client.models.google_table_data_source.GoogleTableDataSource(
+                    portal_client.models.google_table_data_source.GoogleTableDataSource(
                         spreadsheet_id = '', 
                         sheet_name = '', )
                     ],
                 local_files = [
-                    openapi_client.models.local_file_data_source.LocalFileDataSource(
+                    portal_client.models.local_file_data_source.LocalFileDataSource(
                         path = '', )
                     ]
             )

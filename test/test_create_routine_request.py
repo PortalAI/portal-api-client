@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.create_routine_request import CreateRoutineRequest
+from portal_client.portal_client.create_routine_request import CreateRoutineRequest
 
 class TestCreateRoutineRequest(unittest.TestCase):
     """CreateRoutineRequest unit test stubs"""
@@ -40,25 +40,25 @@ class TestCreateRoutineRequest(unittest.TestCase):
                 name = '',
                 requirements = '',
                 interval = '',
-                data_source = openapi_client.models.data_source.DataSource(
+                data_source = portal_client.models.data_source.DataSource(
                     endpoints = [
-                        openapi_client.models.endpoint_data_source.EndpointDataSource(
+                        portal_client.models.endpoint_data_source.EndpointDataSource(
                             url = '', 
                             method = '', 
                             description = '', )
                         ], 
                     sql_tables = [
-                        openapi_client.models.sql_tables_data_source.SqlTablesDataSource(
+                        portal_client.models.sql_tables_data_source.SqlTablesDataSource(
                             connection_string = '', 
                             table_name = '', )
                         ], 
                     google_tables = [
-                        openapi_client.models.google_table_data_source.GoogleTableDataSource(
+                        portal_client.models.google_table_data_source.GoogleTableDataSource(
                             spreadsheet_id = '', 
                             sheet_name = '', )
                         ], 
                     local_files = [
-                        openapi_client.models.local_file_data_source.LocalFileDataSource(
+                        portal_client.models.local_file_data_source.LocalFileDataSource(
                             path = '', )
                         ], )
             )
@@ -68,25 +68,25 @@ class TestCreateRoutineRequest(unittest.TestCase):
                 name = '',
                 requirements = '',
                 interval = '',
-                data_source = openapi_client.models.data_source.DataSource(
+                data_source = portal_client.models.data_source.DataSource(
                     endpoints = [
-                        openapi_client.models.endpoint_data_source.EndpointDataSource(
+                        portal_client.models.endpoint_data_source.EndpointDataSource(
                             url = '', 
                             method = '', 
                             description = '', )
                         ], 
                     sql_tables = [
-                        openapi_client.models.sql_tables_data_source.SqlTablesDataSource(
+                        portal_client.models.sql_tables_data_source.SqlTablesDataSource(
                             connection_string = '', 
                             table_name = '', )
                         ], 
                     google_tables = [
-                        openapi_client.models.google_table_data_source.GoogleTableDataSource(
+                        portal_client.models.google_table_data_source.GoogleTableDataSource(
                             spreadsheet_id = '', 
                             sheet_name = '', )
                         ], 
                     local_files = [
-                        openapi_client.models.local_file_data_source.LocalFileDataSource(
+                        portal_client.models.local_file_data_source.LocalFileDataSource(
                             path = '', )
                         ], ),
         )

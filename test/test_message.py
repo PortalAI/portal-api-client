@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.message import Message
+from portal_client.portal_client.message import Message
 
 class TestMessage(unittest.TestCase):
     """Message unit test stubs"""

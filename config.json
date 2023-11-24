@@ -1,0 +1,7 @@
+{
+    "modelPackage" : "portal_client",
+    "apiPackage" : "portal_client",
+    "projectName": "portal_client",
+    "packageVersion": "1.0.2",
+    "packageName": "portal_client"
+}

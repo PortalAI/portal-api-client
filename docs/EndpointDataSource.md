@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.endpoint_data_source import EndpointDataSource
+from portal_client.portal_client.endpoint_data_source import EndpointDataSource
 
 # TODO update the JSON string below
 json = "{}"

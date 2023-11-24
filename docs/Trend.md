@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.trend import Trend
+from portal_client.portal_client.trend import Trend
 
 # TODO update the JSON string below
 json = "{}"

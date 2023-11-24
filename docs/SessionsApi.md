@@ -1,4 +1,4 @@
-# openapi_client.SessionsApi
+# portal_client.SessionsApi
 
 All URIs are relative to *http://localhost*
 
@@ -21,25 +21,25 @@ Create Session From Text
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.session import Session
-from openapi_client.rest import ApiException
+import portal_client
+from portal_client.models.session import Session
+from portal_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = portal_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with portal_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.SessionsApi(api_client)
+    api_instance = portal_client.SessionsApi(api_client)
     agent_id = 'agent_id_example' # str | 
     text_prompt = 'text_prompt_example' # str | 
-    files = openapi_client.AnyOf() # AnyOf |  (optional)
+    files = portal_client.AnyOf() # AnyOf |  (optional)
 
     try:
         # Create Session From Text
@@ -91,22 +91,22 @@ Get Grouped Sessions
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.grouped_sessions_response import GroupedSessionsResponse
-from openapi_client.rest import ApiException
+import portal_client
+from portal_client.models.grouped_sessions_response import GroupedSessionsResponse
+from portal_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = portal_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with portal_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.SessionsApi(api_client)
+    api_instance = portal_client.SessionsApi(api_client)
 
     try:
         # Get Grouped Sessions
@@ -152,22 +152,22 @@ Get Session
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.session import Session
-from openapi_client.rest import ApiException
+import portal_client
+from portal_client.models.session import Session
+from portal_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = portal_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with portal_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.SessionsApi(api_client)
+    api_instance = portal_client.SessionsApi(api_client)
     session_id = 'session_id_example' # str | 
 
     try:
@@ -218,22 +218,22 @@ Get Sessions
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.get_sessions_response import GetSessionsResponse
-from openapi_client.rest import ApiException
+import portal_client
+from portal_client.models.get_sessions_response import GetSessionsResponse
+from portal_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = portal_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with portal_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.SessionsApi(api_client)
+    api_instance = portal_client.SessionsApi(api_client)
     agent_id = 'agent_id_example' # str | 
 
     try:
@@ -284,25 +284,25 @@ Update Session
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.session import Session
-from openapi_client.models.update_session_from_text_request import UpdateSessionFromTextRequest
-from openapi_client.rest import ApiException
+import portal_client
+from portal_client.models.session import Session
+from portal_client.models.update_session_from_text_request import UpdateSessionFromTextRequest
+from portal_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = portal_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with portal_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.SessionsApi(api_client)
+    api_instance = portal_client.SessionsApi(api_client)
     session_id = 'session_id_example' # str | 
-    update_session_from_text_request = openapi_client.UpdateSessionFromTextRequest() # UpdateSessionFromTextRequest | 
+    update_session_from_text_request = portal_client.UpdateSessionFromTextRequest() # UpdateSessionFromTextRequest | 
 
     try:
         # Update Session

@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.message_role import MessageRole
+from portal_client.portal_client.message_role import MessageRole
 
 class TestMessageRole(unittest.TestCase):
     """MessageRole unit test stubs"""

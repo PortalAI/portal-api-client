@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.report_row import ReportRow
+from portal_client.portal_client.report_row import ReportRow
 
 class TestReportRow(unittest.TestCase):
     """ReportRow unit test stubs"""
@@ -37,7 +37,7 @@ class TestReportRow(unittest.TestCase):
         if include_optional:
             return ReportRow(
                 values = [
-                    openapi_client.models.report_value.ReportValue(
+                    portal_client.models.report_value.ReportValue(
                         key = '', 
                         text = '', 
                         link = '', )
@@ -46,7 +46,7 @@ class TestReportRow(unittest.TestCase):
         else:
             return ReportRow(
                 values = [
-                    openapi_client.models.report_value.ReportValue(
+                    portal_client.models.report_value.ReportValue(
                         key = '', 
                         text = '', 
                         link = '', )

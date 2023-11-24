@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.api.test_api import TestApi
+from portal_client.test_api import TestApi
 
 
 class TestTestApi(unittest.TestCase):
