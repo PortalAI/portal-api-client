@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from portal_client.portal_client.routine import Routine
+from portal_client.models.routine import Routine
 
 class TestRoutine(unittest.TestCase):
     """Routine unit test stubs"""

@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from portal_client.portal_client.report_table import ReportTable
+from portal_client.models.report_table import ReportTable
 
 class TestReportTable(unittest.TestCase):
     """ReportTable unit test stubs"""

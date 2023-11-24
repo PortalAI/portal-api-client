@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from portal_client.portal_client.alert import Alert
+from portal_client.models.alert import Alert
 
 class TestAlert(unittest.TestCase):
     """Alert unit test stubs"""

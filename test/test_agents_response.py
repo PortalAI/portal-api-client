@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from portal_client.portal_client.agents_response import AgentsResponse
+from portal_client.models.agents_response import AgentsResponse
 
 class TestAgentsResponse(unittest.TestCase):
     """AgentsResponse unit test stubs"""

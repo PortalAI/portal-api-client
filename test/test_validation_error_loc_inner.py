@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from portal_client.portal_client.validation_error_loc_inner import ValidationErrorLocInner
+from portal_client.models.validation_error_loc_inner import ValidationErrorLocInner
 
 class TestValidationErrorLocInner(unittest.TestCase):
     """ValidationErrorLocInner unit test stubs"""

@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "portal_client"
-version = "1.0.2"
+version = "1.0.3"
 description = "FastAPI"
 authors = ["OpenAPI Generator Community <team@openapitools.org>"]
 license = "NoLicense"

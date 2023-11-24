@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from portal_client.portal_client.http_validation_error import HTTPValidationError
+from portal_client.models.http_validation_error import HTTPValidationError
 
 # TODO update the JSON string below
 json = "{}"

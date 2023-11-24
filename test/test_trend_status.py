@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from portal_client.portal_client.trend_status import TrendStatus
+from portal_client.models.trend_status import TrendStatus
 
 class TestTrendStatus(unittest.TestCase):
     """TrendStatus unit test stubs"""

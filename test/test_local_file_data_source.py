@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from portal_client.portal_client.local_file_data_source import LocalFileDataSource
+from portal_client.models.local_file_data_source import LocalFileDataSource
 
 class TestLocalFileDataSource(unittest.TestCase):
     """LocalFileDataSource unit test stubs"""

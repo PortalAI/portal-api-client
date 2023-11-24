@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from portal_client.portal_client.sql_tables_data_source import SqlTablesDataSource
+from portal_client.models.sql_tables_data_source import SqlTablesDataSource
 
 # TODO update the JSON string below
 json = "{}"

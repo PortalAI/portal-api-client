@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from portal_client.portal_client.onboarding_summary import OnboardingSummary
+from portal_client.models.onboarding_summary import OnboardingSummary
 
 class TestOnboardingSummary(unittest.TestCase):
     """OnboardingSummary unit test stubs"""

@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from portal_client.portal_client.delete_business_response import DeleteBusinessResponse
+from portal_client.models.delete_business_response import DeleteBusinessResponse
 
 class TestDeleteBusinessResponse(unittest.TestCase):
     """DeleteBusinessResponse unit test stubs"""

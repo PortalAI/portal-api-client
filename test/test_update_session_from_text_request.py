@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from portal_client.portal_client.update_session_from_text_request import UpdateSessionFromTextRequest
+from portal_client.models.update_session_from_text_request import UpdateSessionFromTextRequest
 
 class TestUpdateSessionFromTextRequest(unittest.TestCase):
     """UpdateSessionFromTextRequest unit test stubs"""

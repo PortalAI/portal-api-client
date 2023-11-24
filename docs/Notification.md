@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from portal_client.portal_client.notification import Notification
+from portal_client.models.notification import Notification
 
 # TODO update the JSON string below
 json = "{}"

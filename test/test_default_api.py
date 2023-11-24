@@ -14,7 +14,7 @@
 
 import unittest
 
-from portal_client.default_api import DefaultApi
+from portal_client.api.default_api import DefaultApi
 
 
 class TestDefaultApi(unittest.TestCase):

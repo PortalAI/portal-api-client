@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from portal_client.portal_client.agent import Agent
+from portal_client.models.agent import Agent
 
 # TODO update the JSON string below
 json = "{}"

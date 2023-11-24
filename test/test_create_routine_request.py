@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from portal_client.portal_client.create_routine_request import CreateRoutineRequest
+from portal_client.models.create_routine_request import CreateRoutineRequest
 
 class TestCreateRoutineRequest(unittest.TestCase):
     """CreateRoutineRequest unit test stubs"""

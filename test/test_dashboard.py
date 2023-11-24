@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from portal_client.portal_client.dashboard import Dashboard
+from portal_client.models.dashboard import Dashboard
 
 class TestDashboard(unittest.TestCase):
     """Dashboard unit test stubs"""

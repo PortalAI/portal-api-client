@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from portal_client.portal_client.get_sessions_response import GetSessionsResponse
+from portal_client.models.get_sessions_response import GetSessionsResponse
 
 class TestGetSessionsResponse(unittest.TestCase):
     """GetSessionsResponse unit test stubs"""

@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from portal_client.portal_client.grouped_sessions_response import GroupedSessionsResponse
+from portal_client.models.grouped_sessions_response import GroupedSessionsResponse
 
 class TestGroupedSessionsResponse(unittest.TestCase):
     """GroupedSessionsResponse unit test stubs"""

@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from portal_client.portal_client.data_source import DataSource
+from portal_client.models.data_source import DataSource
 
 # TODO update the JSON string below
 json = "{}"

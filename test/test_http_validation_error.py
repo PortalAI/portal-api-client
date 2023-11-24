@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from portal_client.portal_client.http_validation_error import HTTPValidationError
+from portal_client.models.http_validation_error import HTTPValidationError
 
 class TestHTTPValidationError(unittest.TestCase):
     """HTTPValidationError unit test stubs"""

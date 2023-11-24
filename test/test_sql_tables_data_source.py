@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from portal_client.portal_client.sql_tables_data_source import SqlTablesDataSource
+from portal_client.models.sql_tables_data_source import SqlTablesDataSource
 
 class TestSqlTablesDataSource(unittest.TestCase):
     """SqlTablesDataSource unit test stubs"""

@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from portal_client.portal_client.data_source import DataSource
+from portal_client.models.data_source import DataSource
 
 class TestDataSource(unittest.TestCase):
     """DataSource unit test stubs"""

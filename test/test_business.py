@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from portal_client.portal_client.business import Business
+from portal_client.models.business import Business
 
 class TestBusiness(unittest.TestCase):
     """Business unit test stubs"""

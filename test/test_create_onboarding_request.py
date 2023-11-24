@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from portal_client.portal_client.create_onboarding_request import CreateOnboardingRequest
+from portal_client.models.create_onboarding_request import CreateOnboardingRequest
 
 class TestCreateOnboardingRequest(unittest.TestCase):
     """CreateOnboardingRequest unit test stubs"""

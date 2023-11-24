@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from portal_client.portal_client.session import Session
+from portal_client.models.session import Session
 
 class TestSession(unittest.TestCase):
     """Session unit test stubs"""

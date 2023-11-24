@@ -14,7 +14,7 @@
 
 import unittest
 
-from portal_client.business_api import BusinessApi
+from portal_client.api.business_api import BusinessApi
 
 
 class TestBusinessApi(unittest.TestCase):

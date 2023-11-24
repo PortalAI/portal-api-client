@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from portal_client.portal_client.session_summary import SessionSummary
+from portal_client.models.session_summary import SessionSummary
 
 class TestSessionSummary(unittest.TestCase):
     """SessionSummary unit test stubs"""

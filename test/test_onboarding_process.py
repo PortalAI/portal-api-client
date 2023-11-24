@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from portal_client.portal_client.onboarding_process import OnboardingProcess
+from portal_client.models.onboarding_process import OnboardingProcess
 
 class TestOnboardingProcess(unittest.TestCase):
     """OnboardingProcess unit test stubs"""

@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from portal_client.portal_client.business import Business
+from portal_client.models.business import Business
 
 # TODO update the JSON string below
 json = "{}"

@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from portal_client.portal_client.business_response import BusinessResponse
+from portal_client.models.business_response import BusinessResponse
 
 class TestBusinessResponse(unittest.TestCase):
     """BusinessResponse unit test stubs"""

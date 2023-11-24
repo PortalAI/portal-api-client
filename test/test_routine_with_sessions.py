@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from portal_client.portal_client.routine_with_sessions import RoutineWithSessions
+from portal_client.models.routine_with_sessions import RoutineWithSessions
 
 class TestRoutineWithSessions(unittest.TestCase):
     """RoutineWithSessions unit test stubs"""

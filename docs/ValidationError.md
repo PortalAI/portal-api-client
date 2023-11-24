@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from portal_client.portal_client.validation_error import ValidationError
+from portal_client.models.validation_error import ValidationError
 
 # TODO update the JSON string below
 json = "{}"

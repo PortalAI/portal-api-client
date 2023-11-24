@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from portal_client.portal_client.widget import Widget
+from portal_client.models.widget import Widget
 
 class TestWidget(unittest.TestCase):
     """Widget unit test stubs"""

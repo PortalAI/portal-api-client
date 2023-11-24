@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from portal_client.portal_client.notification import Notification
+from portal_client.models.notification import Notification
 
 class TestNotification(unittest.TestCase):
     """Notification unit test stubs"""
