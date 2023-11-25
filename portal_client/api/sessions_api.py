@@ -23,14 +23,13 @@ try:
 except ImportError:
     from typing_extensions import Annotated
 
-from pydantic import StrictStr
+from pydantic import StrictBytes, StrictStr
 
-from typing import Any, Optional
+from typing import List, Optional, Union
 
 from portal_client.models.get_sessions_response import GetSessionsResponse
 from portal_client.models.grouped_sessions_response import GroupedSessionsResponse
 from portal_client.models.session import Session
-from portal_client.models.update_session_from_text_request import UpdateSessionFromTextRequest
 
 from portal_client.api_client import ApiClient
 from portal_client.api_response import ApiResponse
@@ -55,7 +54,7 @@ class SessionsApi:
         self,
         agent_id: StrictStr,
         text_prompt: StrictStr,
-        files: Optional[Any] = None,
+        files: Optional[List[Union[StrictBytes, StrictStr]]] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -77,7 +76,7 @@ class SessionsApi:
         :param text_prompt: (required)
         :type text_prompt: str
         :param files:
-        :type files: AnyOf
+        :type files: List[bytearray]
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -131,7 +130,7 @@ class SessionsApi:
         self,
         agent_id: StrictStr,
         text_prompt: StrictStr,
-        files: Optional[Any] = None,
+        files: Optional[List[Union[StrictBytes, StrictStr]]] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -153,7 +152,7 @@ class SessionsApi:
         :param text_prompt: (required)
         :type text_prompt: str
         :param files:
-        :type files: AnyOf
+        :type files: List[bytearray]
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -207,7 +206,7 @@ class SessionsApi:
         self,
         agent_id: StrictStr,
         text_prompt: StrictStr,
-        files: Optional[Any] = None,
+        files: Optional[List[Union[StrictBytes, StrictStr]]] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -229,7 +228,7 @@ class SessionsApi:
         :param text_prompt: (required)
         :type text_prompt: str
         :param files:
-        :type files: AnyOf
+        :type files: List[bytearray]
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -289,6 +288,7 @@ class SessionsApi:
 
         _collection_formats: Dict[str, str] = {
             
+            'files': 'csv',
         }
 
         _path_params: Dict[str, str] = {}
@@ -307,7 +307,7 @@ class SessionsApi:
         if text_prompt is not None:
             _form_params.append(('text_prompt', text_prompt))
         if files is not None:
-            _form_params.append(('files', files))
+            _files['files'] = files
         # process the body parameter
 
 
@@ -1125,7 +1125,8 @@ class SessionsApi:
     def update_session(
         self,
         session_id: StrictStr,
-        update_session_from_text_request: UpdateSessionFromTextRequest,
+        text_prompt: StrictStr,
+        files: Optional[List[Union[StrictBytes, StrictStr]]] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1144,8 +1145,10 @@ class SessionsApi:
 
         :param session_id: (required)
         :type session_id: str
-        :param update_session_from_text_request: (required)
-        :type update_session_from_text_request: UpdateSessionFromTextRequest
+        :param text_prompt: (required)
+        :type text_prompt: str
+        :param files:
+        :type files: List[bytearray]
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -1170,7 +1173,8 @@ class SessionsApi:
 
         _param = self._update_session_serialize(
             session_id=session_id,
-            update_session_from_text_request=update_session_from_text_request,
+            text_prompt=text_prompt,
+            files=files,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -1197,7 +1201,8 @@ class SessionsApi:
     def update_session_with_http_info(
         self,
         session_id: StrictStr,
-        update_session_from_text_request: UpdateSessionFromTextRequest,
+        text_prompt: StrictStr,
+        files: Optional[List[Union[StrictBytes, StrictStr]]] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1216,8 +1221,10 @@ class SessionsApi:
 
         :param session_id: (required)
         :type session_id: str
-        :param update_session_from_text_request: (required)
-        :type update_session_from_text_request: UpdateSessionFromTextRequest
+        :param text_prompt: (required)
+        :type text_prompt: str
+        :param files:
+        :type files: List[bytearray]
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -1242,7 +1249,8 @@ class SessionsApi:
 
         _param = self._update_session_serialize(
             session_id=session_id,
-            update_session_from_text_request=update_session_from_text_request,
+            text_prompt=text_prompt,
+            files=files,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -1269,7 +1277,8 @@ class SessionsApi:
     def update_session_without_preload_content(
         self,
         session_id: StrictStr,
-        update_session_from_text_request: UpdateSessionFromTextRequest,
+        text_prompt: StrictStr,
+        files: Optional[List[Union[StrictBytes, StrictStr]]] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1288,8 +1297,10 @@ class SessionsApi:
 
         :param session_id: (required)
         :type session_id: str
-        :param update_session_from_text_request: (required)
-        :type update_session_from_text_request: UpdateSessionFromTextRequest
+        :param text_prompt: (required)
+        :type text_prompt: str
+        :param files:
+        :type files: List[bytearray]
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -1314,7 +1325,8 @@ class SessionsApi:
 
         _param = self._update_session_serialize(
             session_id=session_id,
-            update_session_from_text_request=update_session_from_text_request,
+            text_prompt=text_prompt,
+            files=files,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -1336,7 +1348,8 @@ class SessionsApi:
     def _update_session_serialize(
         self,
         session_id,
-        update_session_from_text_request,
+        text_prompt,
+        files,
         _request_auth,
         _content_type,
         _headers,
@@ -1347,6 +1360,7 @@ class SessionsApi:
 
         _collection_formats: Dict[str, str] = {
             
+            'files': 'csv',
         }
 
         _path_params: Dict[str, str] = {}
@@ -1362,9 +1376,11 @@ class SessionsApi:
         # process the query parameters
         # process the header parameters
         # process the form parameters
+        if text_prompt is not None:
+            _form_params.append(('text_prompt', text_prompt))
+        if files is not None:
+            _files['files'] = files
         # process the body parameter
-        if update_session_from_text_request is not None:
-            _body_params = update_session_from_text_request
 
 
         # set the HTTP header `Accept`
@@ -1381,7 +1397,7 @@ class SessionsApi:
             _default_content_type = (
                 self.api_client.select_header_content_type(
                     [
-                        'application/json'
+                        'multipart/form-data'
                     ]
                 )
             )

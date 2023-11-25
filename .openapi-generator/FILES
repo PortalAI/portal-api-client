@@ -13,7 +13,6 @@ docs/Business.md
 docs/BusinessApi.md
 docs/BusinessResponse.md
 docs/CreateBusinessRequest.md
-docs/CreateOnboardingRequest.md
 docs/CreateRoutineRequest.md
 docs/Dashboard.md
 docs/DashboardApi.md
@@ -29,9 +28,6 @@ docs/LocalFileDataSource.md
 docs/Message.md
 docs/MessageRole.md
 docs/Notification.md
-docs/OnboardingApi.md
-docs/OnboardingProcess.md
-docs/OnboardingSummary.md
 docs/Report.md
 docs/ReportRow.md
 docs/ReportTable.md
@@ -49,8 +45,6 @@ docs/SqlTablesDataSource.md
 docs/TestApi.md
 docs/Trend.md
 docs/TrendStatus.md
-docs/UpdateSessionFromTextRequest.md
-docs/UserAnswer.md
 docs/ValidationError.md
 docs/ValidationErrorLocInner.md
 docs/Widget.md
@@ -62,7 +56,6 @@ portal_client/api/alerts_api.py
 portal_client/api/business_api.py
 portal_client/api/dashboard_api.py
 portal_client/api/default_api.py
-portal_client/api/onboarding_api.py
 portal_client/api/reports_api.py
 portal_client/api/routines_api.py
 portal_client/api/sessions_api.py
@@ -79,7 +72,6 @@ portal_client/models/alert_status.py
 portal_client/models/business.py
 portal_client/models/business_response.py
 portal_client/models/create_business_request.py
-portal_client/models/create_onboarding_request.py
 portal_client/models/create_routine_request.py
 portal_client/models/dashboard.py
 portal_client/models/data_source.py
@@ -93,8 +85,6 @@ portal_client/models/local_file_data_source.py
 portal_client/models/message.py
 portal_client/models/message_role.py
 portal_client/models/notification.py
-portal_client/models/onboarding_process.py
-portal_client/models/onboarding_summary.py
 portal_client/models/report.py
 portal_client/models/report_row.py
 portal_client/models/report_table.py
@@ -108,8 +98,6 @@ portal_client/models/session_summary.py
 portal_client/models/sql_tables_data_source.py
 portal_client/models/trend.py
 portal_client/models/trend_status.py
-portal_client/models/update_session_from_text_request.py
-portal_client/models/user_answer.py
 portal_client/models/validation_error.py
 portal_client/models/validation_error_loc_inner.py
 portal_client/models/widget.py
@@ -121,5 +109,4 @@ setup.cfg
 setup.py
 test-requirements.txt
 test/__init__.py
-test/test_create_business_request.py
 tox.ini

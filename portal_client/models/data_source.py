@@ -19,7 +19,7 @@ import json
 
 
 from typing import Any, ClassVar, Dict, List, Optional
-from pydantic import BaseModel
+from pydantic import BaseModel, StrictStr
 from portal_client.models.endpoint_data_source import EndpointDataSource
 from portal_client.models.google_table_data_source import GoogleTableDataSource
 from portal_client.models.local_file_data_source import LocalFileDataSource
@@ -37,7 +37,8 @@ class DataSource(BaseModel):
     sql_tables: Optional[List[SqlTablesDataSource]] = None
     google_tables: Optional[List[GoogleTableDataSource]] = None
     local_files: Optional[List[LocalFileDataSource]] = None
-    __properties: ClassVar[List[str]] = ["endpoints", "sql_tables", "google_tables", "local_files"]
+    file_ids: Optional[List[StrictStr]] = None
+    __properties: ClassVar[List[str]] = ["endpoints", "sql_tables", "google_tables", "local_files", "file_ids"]
 
     model_config = {
         "populate_by_name": True,
@@ -118,7 +119,8 @@ class DataSource(BaseModel):
             "endpoints": [EndpointDataSource.from_dict(_item) for _item in obj.get("endpoints")] if obj.get("endpoints") is not None else None,
             "sql_tables": [SqlTablesDataSource.from_dict(_item) for _item in obj.get("sql_tables")] if obj.get("sql_tables") is not None else None,
             "google_tables": [GoogleTableDataSource.from_dict(_item) for _item in obj.get("google_tables")] if obj.get("google_tables") is not None else None,
-            "local_files": [LocalFileDataSource.from_dict(_item) for _item in obj.get("local_files")] if obj.get("local_files") is not None else None
+            "local_files": [LocalFileDataSource.from_dict(_item) for _item in obj.get("local_files")] if obj.get("local_files") is not None else None,
+            "file_ids": obj.get("file_ids")
         })
         return _obj
 

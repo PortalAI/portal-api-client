@@ -39,7 +39,7 @@ with portal_client.ApiClient(configuration) as api_client:
     api_instance = portal_client.SessionsApi(api_client)
     agent_id = 'agent_id_example' # str | 
     text_prompt = 'text_prompt_example' # str | 
-    files = portal_client.AnyOf() # AnyOf |  (optional)
+    files = None # List[bytearray] |  (optional)
 
     try:
         # Create Session From Text
@@ -58,7 +58,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **agent_id** | **str**|  | 
  **text_prompt** | **str**|  | 
- **files** | [**AnyOf**](AnyOf.md)|  | [optional] 
+ **files** | **List[bytearray]**|  | [optional] 
 
 ### Return type
 
@@ -275,7 +275,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_session**
-> Session update_session(session_id, update_session_from_text_request)
+> Session update_session(session_id, text_prompt, files=files)
 
 Update Session
 
@@ -286,7 +286,6 @@ import time
 import os
 import portal_client
 from portal_client.models.session import Session
-from portal_client.models.update_session_from_text_request import UpdateSessionFromTextRequest
 from portal_client.rest import ApiException
 from pprint import pprint
 
@@ -302,11 +301,12 @@ with portal_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = portal_client.SessionsApi(api_client)
     session_id = 'session_id_example' # str | 
-    update_session_from_text_request = portal_client.UpdateSessionFromTextRequest() # UpdateSessionFromTextRequest | 
+    text_prompt = 'text_prompt_example' # str | 
+    files = None # List[bytearray] |  (optional)
 
     try:
         # Update Session
-        api_response = api_instance.update_session(session_id, update_session_from_text_request)
+        api_response = api_instance.update_session(session_id, text_prompt, files=files)
         print("The response of SessionsApi->update_session:\n")
         pprint(api_response)
     except Exception as e:
@@ -320,7 +320,8 @@ with portal_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **session_id** | **str**|  | 
- **update_session_from_text_request** | [**UpdateSessionFromTextRequest**](UpdateSessionFromTextRequest.md)|  | 
+ **text_prompt** | **str**|  | 
+ **files** | **List[bytearray]**|  | [optional] 
 
 ### Return type
 
@@ -332,7 +333,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: multipart/form-data
  - **Accept**: application/json
 
 ### HTTP response details

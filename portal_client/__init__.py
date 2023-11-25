@@ -14,7 +14,7 @@
 """  # noqa: E501
 
 
-__version__ = "1.0.5"
+__version__ = "1.0.6"
 
 # import apis into sdk package
 from portal_client.api.agents_api import AgentsApi
@@ -22,7 +22,6 @@ from portal_client.api.alerts_api import AlertsApi
 from portal_client.api.business_api import BusinessApi
 from portal_client.api.dashboard_api import DashboardApi
 from portal_client.api.default_api import DefaultApi
-from portal_client.api.onboarding_api import OnboardingApi
 from portal_client.api.reports_api import ReportsApi
 from portal_client.api.routines_api import RoutinesApi
 from portal_client.api.sessions_api import SessionsApi
@@ -47,7 +46,6 @@ from portal_client.models.alert_status import AlertStatus
 from portal_client.models.business import Business
 from portal_client.models.business_response import BusinessResponse
 from portal_client.models.create_business_request import CreateBusinessRequest
-from portal_client.models.create_onboarding_request import CreateOnboardingRequest
 from portal_client.models.create_routine_request import CreateRoutineRequest
 from portal_client.models.dashboard import Dashboard
 from portal_client.models.data_source import DataSource
@@ -61,8 +59,6 @@ from portal_client.models.local_file_data_source import LocalFileDataSource
 from portal_client.models.message import Message
 from portal_client.models.message_role import MessageRole
 from portal_client.models.notification import Notification
-from portal_client.models.onboarding_process import OnboardingProcess
-from portal_client.models.onboarding_summary import OnboardingSummary
 from portal_client.models.report import Report
 from portal_client.models.report_row import ReportRow
 from portal_client.models.report_table import ReportTable
@@ -76,8 +72,6 @@ from portal_client.models.session_summary import SessionSummary
 from portal_client.models.sql_tables_data_source import SqlTablesDataSource
 from portal_client.models.trend import Trend
 from portal_client.models.trend_status import TrendStatus
-from portal_client.models.update_session_from_text_request import UpdateSessionFromTextRequest
-from portal_client.models.user_answer import UserAnswer
 from portal_client.models.validation_error import ValidationError
 from portal_client.models.validation_error_loc_inner import ValidationErrorLocInner
 from portal_client.models.widget import Widget

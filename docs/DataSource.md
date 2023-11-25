@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **sql_tables** | [**List[SqlTablesDataSource]**](SqlTablesDataSource.md) |  | [optional] 
 **google_tables** | [**List[GoogleTableDataSource]**](GoogleTableDataSource.md) |  | [optional] 
 **local_files** | [**List[LocalFileDataSource]**](LocalFileDataSource.md) |  | [optional] 
+**file_ids** | **List[str]** |  | [optional] 
 
 ## Example
 

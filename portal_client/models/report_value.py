@@ -19,7 +19,7 @@ import json
 
 
 from typing import Any, ClassVar, Dict, List, Optional
-from pydantic import BaseModel, StrictStr
+from pydantic import BaseModel, StrictBool, StrictStr
 try:
     from typing import Self
 except ImportError:
@@ -32,7 +32,8 @@ class ReportValue(BaseModel):
     key: StrictStr
     text: StrictStr
     link: Optional[StrictStr] = ''
-    __properties: ClassVar[List[str]] = ["key", "text", "link"]
+    is_downloadable: Optional[StrictBool] = False
+    __properties: ClassVar[List[str]] = ["key", "text", "link", "is_downloadable"]
 
     model_config = {
         "populate_by_name": True,
@@ -84,7 +85,8 @@ class ReportValue(BaseModel):
         _obj = cls.model_validate({
             "key": obj.get("key"),
             "text": obj.get("text"),
-            "link": obj.get("link") if obj.get("link") is not None else ''
+            "link": obj.get("link") if obj.get("link") is not None else '',
+            "is_downloadable": obj.get("is_downloadable") if obj.get("is_downloadable") is not None else False
         })
         return _obj
 

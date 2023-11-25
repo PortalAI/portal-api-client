@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **key** | **str** |  | 
 **text** | **str** |  | 
 **link** | **str** |  | [optional] [default to '']
+**is_downloadable** | **bool** |  | [optional] [default to False]
 
 ## Example
 
