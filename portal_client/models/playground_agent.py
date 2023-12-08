@@ -25,15 +25,16 @@ try:
 except ImportError:
     from typing_extensions import Self
 
-class Business(BaseModel):
+class PlaygroundAgent(BaseModel):
     """
-    Business
+    PlaygroundAgent
     """ # noqa: E501
     id: StrictStr
-    user_id: StrictStr
     name: StrictStr
-    description: StrictStr
-    __properties: ClassVar[List[str]] = ["id", "user_id", "name", "description"]
+    icon: StrictStr
+    assistant_id: StrictStr
+    instructions: StrictStr
+    __properties: ClassVar[List[str]] = ["id", "name", "icon", "assistant_id", "instructions"]
 
     model_config = {
         "populate_by_name": True,
@@ -52,7 +53,7 @@ class Business(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Self:
-        """Create an instance of Business from a JSON string"""
+        """Create an instance of PlaygroundAgent from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -75,7 +76,7 @@ class Business(BaseModel):
 
     @classmethod
     def from_dict(cls, obj: Dict) -> Self:
-        """Create an instance of Business from a dict"""
+        """Create an instance of PlaygroundAgent from a dict"""
         if obj is None:
             return None
 
@@ -84,9 +85,10 @@ class Business(BaseModel):
 
         _obj = cls.model_validate({
             "id": obj.get("id"),
-            "user_id": obj.get("user_id"),
             "name": obj.get("name"),
-            "description": obj.get("description")
+            "icon": obj.get("icon"),
+            "assistant_id": obj.get("assistant_id"),
+            "instructions": obj.get("instructions")
         })
         return _obj
 

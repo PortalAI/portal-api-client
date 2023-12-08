@@ -18,8 +18,9 @@ import re  # noqa: F401
 import json
 
 
-from typing import Any, ClassVar, Dict, List
+from typing import Any, ClassVar, Dict, List, Optional
 from pydantic import BaseModel, StrictStr
+from portal_client.models.message_agent import MessageAgent
 from portal_client.models.message_role import MessageRole
 try:
     from typing import Self
@@ -32,7 +33,8 @@ class Message(BaseModel):
     """ # noqa: E501
     text: StrictStr
     role: MessageRole
-    __properties: ClassVar[List[str]] = ["text", "role"]
+    agent: Optional[MessageAgent] = None
+    __properties: ClassVar[List[str]] = ["text", "role", "agent"]
 
     model_config = {
         "populate_by_name": True,
@@ -70,6 +72,14 @@ class Message(BaseModel):
             },
             exclude_none=True,
         )
+        # override the default output from pydantic by calling `to_dict()` of agent
+        if self.agent:
+            _dict['agent'] = self.agent.to_dict()
+        # set to None if agent (nullable) is None
+        # and model_fields_set contains the field
+        if self.agent is None and "agent" in self.model_fields_set:
+            _dict['agent'] = None
+
         return _dict
 
     @classmethod
@@ -83,7 +93,8 @@ class Message(BaseModel):
 
         _obj = cls.model_validate({
             "text": obj.get("text"),
-            "role": obj.get("role")
+            "role": obj.get("role"),
+            "agent": MessageAgent.from_dict(obj.get("agent")) if obj.get("agent") is not None else None
         })
         return _obj
 

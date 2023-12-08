@@ -1,15 +1,15 @@
-# portal_client.AgentsApi
+# portal_client.PlaygroundApi
 
 All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_agent**](AgentsApi.md#get_agent) | **GET** /agents/{agent_id} | Get Agents
-[**get_agents**](AgentsApi.md#get_agents) | **GET** /agents | Get Agents
+[**get_playground_agents**](PlaygroundApi.md#get_playground_agents) | **GET** /playground/agents | Get Agents
+[**update_playground_agents**](PlaygroundApi.md#update_playground_agents) | **PUT** /playground/agents | Update Agents
 
 
-# **get_agent**
-> Agent get_agent(agent_id)
+# **get_playground_agents**
+> PlaygroundAgentsResponse get_playground_agents()
 
 Get Agents
 
@@ -20,7 +20,7 @@ Get Agents
 import time
 import os
 import portal_client
-from portal_client.models.agent import Agent
+from portal_client.models.playground_agents_response import PlaygroundAgentsResponse
 from portal_client.rest import ApiException
 from pprint import pprint
 
@@ -43,91 +43,15 @@ configuration = portal_client.Configuration(
 # Enter a context with an instance of the API client
 with portal_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = portal_client.AgentsApi(api_client)
-    agent_id = 'agent_id_example' # str | 
+    api_instance = portal_client.PlaygroundApi(api_client)
 
     try:
         # Get Agents
-        api_response = api_instance.get_agent(agent_id)
-        print("The response of AgentsApi->get_agent:\n")
+        api_response = api_instance.get_playground_agents()
+        print("The response of PlaygroundApi->get_playground_agents:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling AgentsApi->get_agent: %s\n" % e)
-```
-
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **agent_id** | **str**|  | 
-
-### Return type
-
-[**Agent**](Agent.md)
-
-### Authorization
-
-[HTTPBearer](../README.md#HTTPBearer)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | Successful Response |  -  |
-**422** | Validation Error |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **get_agents**
-> AgentsResponse get_agents()
-
-Get Agents
-
-### Example
-
-* Bearer Authentication (HTTPBearer):
-```python
-import time
-import os
-import portal_client
-from portal_client.models.agents_response import AgentsResponse
-from portal_client.rest import ApiException
-from pprint import pprint
-
-# Defining the host is optional and defaults to http://localhost
-# See configuration.py for a list of all supported configuration parameters.
-configuration = portal_client.Configuration(
-    host = "http://localhost"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure Bearer authorization: HTTPBearer
-configuration = portal_client.Configuration(
-    access_token = os.environ["BEARER_TOKEN"]
-)
-
-# Enter a context with an instance of the API client
-with portal_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = portal_client.AgentsApi(api_client)
-
-    try:
-        # Get Agents
-        api_response = api_instance.get_agents()
-        print("The response of AgentsApi->get_agents:\n")
-        pprint(api_response)
-    except Exception as e:
-        print("Exception when calling AgentsApi->get_agents: %s\n" % e)
+        print("Exception when calling PlaygroundApi->get_playground_agents: %s\n" % e)
 ```
 
 
@@ -137,7 +61,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**AgentsResponse**](AgentsResponse.md)
+[**PlaygroundAgentsResponse**](PlaygroundAgentsResponse.md)
 
 ### Authorization
 
@@ -152,6 +76,83 @@ This endpoint does not need any parameter.
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Successful Response |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_playground_agents**
+> PlaygroundAgentsResponse update_playground_agents(playground_update_agents_request)
+
+Update Agents
+
+### Example
+
+* Bearer Authentication (HTTPBearer):
+```python
+import time
+import os
+import portal_client
+from portal_client.models.playground_agents_response import PlaygroundAgentsResponse
+from portal_client.models.playground_update_agents_request import PlaygroundUpdateAgentsRequest
+from portal_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = portal_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure Bearer authorization: HTTPBearer
+configuration = portal_client.Configuration(
+    access_token = os.environ["BEARER_TOKEN"]
+)
+
+# Enter a context with an instance of the API client
+with portal_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = portal_client.PlaygroundApi(api_client)
+    playground_update_agents_request = portal_client.PlaygroundUpdateAgentsRequest() # PlaygroundUpdateAgentsRequest | 
+
+    try:
+        # Update Agents
+        api_response = api_instance.update_playground_agents(playground_update_agents_request)
+        print("The response of PlaygroundApi->update_playground_agents:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling PlaygroundApi->update_playground_agents: %s\n" % e)
+```
+
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **playground_update_agents_request** | [**PlaygroundUpdateAgentsRequest**](PlaygroundUpdateAgentsRequest.md)|  | 
+
+### Return type
+
+[**PlaygroundAgentsResponse**](PlaygroundAgentsResponse.md)
+
+### Authorization
+
+[HTTPBearer](../README.md#HTTPBearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful Response |  -  |
+**422** | Validation Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

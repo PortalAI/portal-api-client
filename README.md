@@ -61,6 +61,15 @@ configuration = portal_client.Configuration(
     host = "http://localhost"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure Bearer authorization: HTTPBearer
+configuration = portal_client.Configuration(
+    access_token = os.environ["BEARER_TOKEN"]
+)
 
 
 # Enter a context with an instance of the API client
@@ -96,18 +105,23 @@ Class | Method | HTTP request | Description
 *BusinessApi* | [**update_business**](docs/BusinessApi.md#update_business) | **PUT** /business | Update Business
 *DashboardApi* | [**get_dashboard**](docs/DashboardApi.md#get_dashboard) | **GET** /dashboard | Get Dashboard
 *DefaultApi* | [**root_get**](docs/DefaultApi.md#root_get) | **GET** / | Root
+*PlaygroundApi* | [**get_playground_agents**](docs/PlaygroundApi.md#get_playground_agents) | **GET** /playground/agents | Get Agents
+*PlaygroundApi* | [**update_playground_agents**](docs/PlaygroundApi.md#update_playground_agents) | **PUT** /playground/agents | Update Agents
 *ReportsApi* | [**get_report**](docs/ReportsApi.md#get_report) | **GET** /reports/{agent_id} | Get Report
 *RoutinesApi* | [**create_routine**](docs/RoutinesApi.md#create_routine) | **POST** /routines | Create Routine
 *RoutinesApi* | [**delete_routine**](docs/RoutinesApi.md#delete_routine) | **DELETE** /routines/{routine_id} | Delete Routine
 *RoutinesApi* | [**get_routines**](docs/RoutinesApi.md#get_routines) | **GET** /routines | Get Routines
 *RoutinesApi* | [**run_async_routine**](docs/RoutinesApi.md#run_async_routine) | **PUT** /routines/{routine_id}/run/async | Run Async Routine
 *RoutinesApi* | [**run_routine**](docs/RoutinesApi.md#run_routine) | **PUT** /routines/{routine_id}/run | Run Routine
-*SessionsApi* | [**create_session_from_text**](docs/SessionsApi.md#create_session_from_text) | **POST** /sessions/text | Create Session From Text
+*SessionsApi* | [**create_async_session**](docs/SessionsApi.md#create_async_session) | **POST** /sessions/async | Create Async Session
+*SessionsApi* | [**create_session**](docs/SessionsApi.md#create_session) | **POST** /sessions | Create Session
+*SessionsApi* | [**create_session_from_replay**](docs/SessionsApi.md#create_session_from_replay) | **POST** /sessions/replay | Create Session From Replay
 *SessionsApi* | [**get_grouped_sessions**](docs/SessionsApi.md#get_grouped_sessions) | **GET** /sessions/grouped | Get Grouped Sessions
 *SessionsApi* | [**get_session**](docs/SessionsApi.md#get_session) | **GET** /sessions/{session_id} | Get Session
 *SessionsApi* | [**get_sessions**](docs/SessionsApi.md#get_sessions) | **GET** /sessions | Get Sessions
+*SessionsApi* | [**subscribe_to_session**](docs/SessionsApi.md#subscribe_to_session) | **GET** /sessions/{session_id}/subscribe | Subscribe To Session
+*SessionsApi* | [**update_async_session**](docs/SessionsApi.md#update_async_session) | **PUT** /sessions/{session_id}/async | Update Async Session
 *SessionsApi* | [**update_session**](docs/SessionsApi.md#update_session) | **PUT** /sessions/{session_id} | Update Session
-*TestApi* | [**get_agents_test_metrics_get**](docs/TestApi.md#get_agents_test_metrics_get) | **GET** /test/metrics | Get Agents
 
 
 ## Documentation For Models
@@ -116,6 +130,7 @@ Class | Method | HTTP request | Description
  - [AgentsResponse](docs/AgentsResponse.md)
  - [Alert](docs/Alert.md)
  - [AlertStatus](docs/AlertStatus.md)
+ - [AsyncSessionResponse](docs/AsyncSessionResponse.md)
  - [Business](docs/Business.md)
  - [BusinessResponse](docs/BusinessResponse.md)
  - [CreateBusinessRequest](docs/CreateBusinessRequest.md)
@@ -130,8 +145,12 @@ Class | Method | HTTP request | Description
  - [HTTPValidationError](docs/HTTPValidationError.md)
  - [LocalFileDataSource](docs/LocalFileDataSource.md)
  - [Message](docs/Message.md)
+ - [MessageAgent](docs/MessageAgent.md)
  - [MessageRole](docs/MessageRole.md)
  - [Notification](docs/Notification.md)
+ - [PlaygroundAgent](docs/PlaygroundAgent.md)
+ - [PlaygroundAgentsResponse](docs/PlaygroundAgentsResponse.md)
+ - [PlaygroundUpdateAgentsRequest](docs/PlaygroundUpdateAgentsRequest.md)
  - [Report](docs/Report.md)
  - [ReportRow](docs/ReportRow.md)
  - [ReportTable](docs/ReportTable.md)
@@ -153,7 +172,12 @@ Class | Method | HTTP request | Description
 <a id="documentation-for-authorization"></a>
 ## Documentation For Authorization
 
-Endpoints do not require authorization.
+
+Authentication schemes defined for the API:
+<a id="HTTPBearer"></a>
+### HTTPBearer
+
+- **Type**: Bearer authentication
 
 
 ## Author

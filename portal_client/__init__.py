@@ -22,10 +22,10 @@ from portal_client.api.alerts_api import AlertsApi
 from portal_client.api.business_api import BusinessApi
 from portal_client.api.dashboard_api import DashboardApi
 from portal_client.api.default_api import DefaultApi
+from portal_client.api.playground_api import PlaygroundApi
 from portal_client.api.reports_api import ReportsApi
 from portal_client.api.routines_api import RoutinesApi
 from portal_client.api.sessions_api import SessionsApi
-from portal_client.api.test_api import TestApi
 
 # import ApiClient
 from portal_client.api_response import ApiResponse
@@ -43,6 +43,7 @@ from portal_client.models.agent import Agent
 from portal_client.models.agents_response import AgentsResponse
 from portal_client.models.alert import Alert
 from portal_client.models.alert_status import AlertStatus
+from portal_client.models.async_session_response import AsyncSessionResponse
 from portal_client.models.business import Business
 from portal_client.models.business_response import BusinessResponse
 from portal_client.models.create_business_request import CreateBusinessRequest
@@ -57,8 +58,12 @@ from portal_client.models.grouped_sessions_response import GroupedSessionsRespon
 from portal_client.models.http_validation_error import HTTPValidationError
 from portal_client.models.local_file_data_source import LocalFileDataSource
 from portal_client.models.message import Message
+from portal_client.models.message_agent import MessageAgent
 from portal_client.models.message_role import MessageRole
 from portal_client.models.notification import Notification
+from portal_client.models.playground_agent import PlaygroundAgent
+from portal_client.models.playground_agents_response import PlaygroundAgentsResponse
+from portal_client.models.playground_update_agents_request import PlaygroundUpdateAgentsRequest
 from portal_client.models.report import Report
 from portal_client.models.report_row import ReportRow
 from portal_client.models.report_table import ReportTable

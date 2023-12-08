@@ -33,12 +33,14 @@ class Session(BaseModel):
     """ # noqa: E501
     id: StrictStr
     agent_id: StrictStr
+    thread_id: StrictStr
     created_at: datetime
     updated_at: datetime
     messages: List[Message]
     status: SessionStatus
+    user_id: StrictStr
     routine_id: Optional[StrictStr] = None
-    __properties: ClassVar[List[str]] = ["id", "agent_id", "created_at", "updated_at", "messages", "status", "routine_id"]
+    __properties: ClassVar[List[str]] = ["id", "agent_id", "thread_id", "created_at", "updated_at", "messages", "status", "user_id", "routine_id"]
 
     model_config = {
         "populate_by_name": True,
@@ -102,10 +104,12 @@ class Session(BaseModel):
         _obj = cls.model_validate({
             "id": obj.get("id"),
             "agent_id": obj.get("agent_id"),
+            "thread_id": obj.get("thread_id"),
             "created_at": obj.get("created_at"),
             "updated_at": obj.get("updated_at"),
             "messages": [Message.from_dict(_item) for _item in obj.get("messages")] if obj.get("messages") is not None else None,
             "status": obj.get("status"),
+            "user_id": obj.get("user_id"),
             "routine_id": obj.get("routine_id")
         })
         return _obj

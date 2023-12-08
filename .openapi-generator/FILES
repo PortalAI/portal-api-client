@@ -9,6 +9,7 @@ docs/AgentsResponse.md
 docs/Alert.md
 docs/AlertStatus.md
 docs/AlertsApi.md
+docs/AsyncSessionResponse.md
 docs/Business.md
 docs/BusinessApi.md
 docs/BusinessResponse.md
@@ -26,8 +27,13 @@ docs/GroupedSessionsResponse.md
 docs/HTTPValidationError.md
 docs/LocalFileDataSource.md
 docs/Message.md
+docs/MessageAgent.md
 docs/MessageRole.md
 docs/Notification.md
+docs/PlaygroundAgent.md
+docs/PlaygroundAgentsResponse.md
+docs/PlaygroundApi.md
+docs/PlaygroundUpdateAgentsRequest.md
 docs/Report.md
 docs/ReportRow.md
 docs/ReportTable.md
@@ -42,7 +48,6 @@ docs/SessionStatus.md
 docs/SessionSummary.md
 docs/SessionsApi.md
 docs/SqlTablesDataSource.md
-docs/TestApi.md
 docs/Trend.md
 docs/TrendStatus.md
 docs/ValidationError.md
@@ -56,10 +61,10 @@ portal_client/api/alerts_api.py
 portal_client/api/business_api.py
 portal_client/api/dashboard_api.py
 portal_client/api/default_api.py
+portal_client/api/playground_api.py
 portal_client/api/reports_api.py
 portal_client/api/routines_api.py
 portal_client/api/sessions_api.py
-portal_client/api/test_api.py
 portal_client/api_client.py
 portal_client/api_response.py
 portal_client/configuration.py
@@ -69,6 +74,7 @@ portal_client/models/agent.py
 portal_client/models/agents_response.py
 portal_client/models/alert.py
 portal_client/models/alert_status.py
+portal_client/models/async_session_response.py
 portal_client/models/business.py
 portal_client/models/business_response.py
 portal_client/models/create_business_request.py
@@ -83,8 +89,12 @@ portal_client/models/grouped_sessions_response.py
 portal_client/models/http_validation_error.py
 portal_client/models/local_file_data_source.py
 portal_client/models/message.py
+portal_client/models/message_agent.py
 portal_client/models/message_role.py
 portal_client/models/notification.py
+portal_client/models/playground_agent.py
+portal_client/models/playground_agents_response.py
+portal_client/models/playground_update_agents_request.py
 portal_client/models/report.py
 portal_client/models/report_row.py
 portal_client/models/report_table.py
@@ -109,4 +119,10 @@ setup.cfg
 setup.py
 test-requirements.txt
 test/__init__.py
+test/test_async_session_response.py
+test/test_message_agent.py
+test/test_playground_agent.py
+test/test_playground_agents_response.py
+test/test_playground_api.py
+test/test_playground_update_agents_request.py
 tox.ini

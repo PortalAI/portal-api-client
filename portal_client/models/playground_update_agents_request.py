@@ -19,21 +19,19 @@ import json
 
 
 from typing import Any, ClassVar, Dict, List
-from pydantic import BaseModel, StrictStr
+from pydantic import BaseModel
+from portal_client.models.playground_agent import PlaygroundAgent
 try:
     from typing import Self
 except ImportError:
     from typing_extensions import Self
 
-class Business(BaseModel):
+class PlaygroundUpdateAgentsRequest(BaseModel):
     """
-    Business
+    PlaygroundUpdateAgentsRequest
     """ # noqa: E501
-    id: StrictStr
-    user_id: StrictStr
-    name: StrictStr
-    description: StrictStr
-    __properties: ClassVar[List[str]] = ["id", "user_id", "name", "description"]
+    agents: List[PlaygroundAgent]
+    __properties: ClassVar[List[str]] = ["agents"]
 
     model_config = {
         "populate_by_name": True,
@@ -52,7 +50,7 @@ class Business(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Self:
-        """Create an instance of Business from a JSON string"""
+        """Create an instance of PlaygroundUpdateAgentsRequest from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -71,11 +69,18 @@ class Business(BaseModel):
             },
             exclude_none=True,
         )
+        # override the default output from pydantic by calling `to_dict()` of each item in agents (list)
+        _items = []
+        if self.agents:
+            for _item in self.agents:
+                if _item:
+                    _items.append(_item.to_dict())
+            _dict['agents'] = _items
         return _dict
 
     @classmethod
     def from_dict(cls, obj: Dict) -> Self:
-        """Create an instance of Business from a dict"""
+        """Create an instance of PlaygroundUpdateAgentsRequest from a dict"""
         if obj is None:
             return None
 
@@ -83,10 +88,7 @@ class Business(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "id": obj.get("id"),
-            "user_id": obj.get("user_id"),
-            "name": obj.get("name"),
-            "description": obj.get("description")
+            "agents": [PlaygroundAgent.from_dict(_item) for _item in obj.get("agents")] if obj.get("agents") is not None else None
         })
         return _obj
 

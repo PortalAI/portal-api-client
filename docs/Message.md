@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **text** | **str** |  | 
 **role** | [**MessageRole**](MessageRole.md) |  | 
+**agent** | [**MessageAgent**](MessageAgent.md) |  | [optional] 
 
 ## Example
 

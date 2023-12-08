@@ -6,10 +6,12 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **str** |  | 
 **agent_id** | **str** |  | 
+**thread_id** | **str** |  | 
 **created_at** | **datetime** |  | 
 **updated_at** | **datetime** |  | 
 **messages** | [**List[Message]**](Message.md) |  | 
 **status** | [**SessionStatus**](SessionStatus.md) |  | 
+**user_id** | **str** |  | 
 **routine_id** | **str** |  | [optional] 
 
 ## Example

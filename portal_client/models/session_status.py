@@ -37,6 +37,7 @@ class SessionStatus(str, Enum):
     READY = 'Ready'
     RUNNING = 'Running'
     FLUSHED = 'Flushed'
+    ERROR = 'Error'
 
     @classmethod
     def from_json(cls, json_str: str) -> Self:
