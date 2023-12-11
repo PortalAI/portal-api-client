@@ -96,9 +96,6 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *AgentsApi* | [**get_agent**](docs/AgentsApi.md#get_agent) | **GET** /agents/{agent_id} | Get Agents
 *AgentsApi* | [**get_agents**](docs/AgentsApi.md#get_agents) | **GET** /agents | Get Agents
-*AlertsApi* | [**create_alert**](docs/AlertsApi.md#create_alert) | **POST** /alerts | Create Alert
-*AlertsApi* | [**get_alerts**](docs/AlertsApi.md#get_alerts) | **GET** /alerts | Get Alerts
-*AlertsApi* | [**update_alert**](docs/AlertsApi.md#update_alert) | **PUT** /alerts/{alert_id} | Update Alert
 *BusinessApi* | [**create_business**](docs/BusinessApi.md#create_business) | **POST** /business | Create Business
 *BusinessApi* | [**delete_business**](docs/BusinessApi.md#delete_business) | **DELETE** /business/{business_id} | Delete Business
 *BusinessApi* | [**get_business**](docs/BusinessApi.md#get_business) | **GET** /business | Get Business
@@ -128,26 +125,19 @@ Class | Method | HTTP request | Description
 
  - [Agent](docs/Agent.md)
  - [AgentsResponse](docs/AgentsResponse.md)
- - [Alert](docs/Alert.md)
- - [AlertStatus](docs/AlertStatus.md)
  - [AsyncSessionResponse](docs/AsyncSessionResponse.md)
  - [Business](docs/Business.md)
  - [BusinessResponse](docs/BusinessResponse.md)
  - [CreateBusinessRequest](docs/CreateBusinessRequest.md)
  - [CreateRoutineRequest](docs/CreateRoutineRequest.md)
  - [Dashboard](docs/Dashboard.md)
- - [DataSource](docs/DataSource.md)
  - [DeleteBusinessResponse](docs/DeleteBusinessResponse.md)
- - [EndpointDataSource](docs/EndpointDataSource.md)
  - [GetSessionsResponse](docs/GetSessionsResponse.md)
- - [GoogleTableDataSource](docs/GoogleTableDataSource.md)
  - [GroupedSessionsResponse](docs/GroupedSessionsResponse.md)
  - [HTTPValidationError](docs/HTTPValidationError.md)
- - [LocalFileDataSource](docs/LocalFileDataSource.md)
  - [Message](docs/Message.md)
  - [MessageAgent](docs/MessageAgent.md)
  - [MessageRole](docs/MessageRole.md)
- - [Notification](docs/Notification.md)
  - [PlaygroundAgent](docs/PlaygroundAgent.md)
  - [PlaygroundAgentsResponse](docs/PlaygroundAgentsResponse.md)
  - [PlaygroundUpdateAgentsRequest](docs/PlaygroundUpdateAgentsRequest.md)
@@ -161,7 +151,6 @@ Class | Method | HTTP request | Description
  - [Session](docs/Session.md)
  - [SessionStatus](docs/SessionStatus.md)
  - [SessionSummary](docs/SessionSummary.md)
- - [SqlTablesDataSource](docs/SqlTablesDataSource.md)
  - [Trend](docs/Trend.md)
  - [TrendStatus](docs/TrendStatus.md)
  - [ValidationError](docs/ValidationError.md)

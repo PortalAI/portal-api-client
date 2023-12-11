@@ -6,11 +6,11 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **str** |  | 
 **agent_id** | **str** |  | 
+**user_id** | **str** |  | 
 **name** | **str** |  | 
 **requirements** | **str** |  | 
 **interval** | **str** |  | 
 **trend** | [**Trend**](Trend.md) |  | 
-**data_source** | [**DataSource**](DataSource.md) |  | 
 **sessions** | [**List[Session]**](Session.md) |  | 
 **latest_answer** | **str** |  | 
 

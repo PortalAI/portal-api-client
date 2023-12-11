@@ -20,7 +20,6 @@ import json
 
 from typing import Any, ClassVar, Dict, List
 from pydantic import BaseModel, StrictStr
-from portal_client.models.data_source import DataSource
 from portal_client.models.trend import Trend
 try:
     from typing import Self
@@ -33,12 +32,12 @@ class Routine(BaseModel):
     """ # noqa: E501
     id: StrictStr
     agent_id: StrictStr
+    user_id: StrictStr
     name: StrictStr
     requirements: StrictStr
     interval: StrictStr
     trend: Trend
-    data_source: DataSource
-    __properties: ClassVar[List[str]] = ["id", "agent_id", "name", "requirements", "interval", "trend", "data_source"]
+    __properties: ClassVar[List[str]] = ["id", "agent_id", "user_id", "name", "requirements", "interval", "trend"]
 
     model_config = {
         "populate_by_name": True,
@@ -79,9 +78,6 @@ class Routine(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of trend
         if self.trend:
             _dict['trend'] = self.trend.to_dict()
-        # override the default output from pydantic by calling `to_dict()` of data_source
-        if self.data_source:
-            _dict['data_source'] = self.data_source.to_dict()
         return _dict
 
     @classmethod
@@ -96,11 +92,11 @@ class Routine(BaseModel):
         _obj = cls.model_validate({
             "id": obj.get("id"),
             "agent_id": obj.get("agent_id"),
+            "user_id": obj.get("user_id"),
             "name": obj.get("name"),
             "requirements": obj.get("requirements"),
             "interval": obj.get("interval"),
-            "trend": Trend.from_dict(obj.get("trend")) if obj.get("trend") is not None else None,
-            "data_source": DataSource.from_dict(obj.get("data_source")) if obj.get("data_source") is not None else None
+            "trend": Trend.from_dict(obj.get("trend")) if obj.get("trend") is not None else None
         })
         return _obj
 

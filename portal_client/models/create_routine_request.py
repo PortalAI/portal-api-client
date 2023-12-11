@@ -20,7 +20,6 @@ import json
 
 from typing import Any, ClassVar, Dict, List
 from pydantic import BaseModel, StrictStr
-from portal_client.models.data_source import DataSource
 try:
     from typing import Self
 except ImportError:
@@ -34,8 +33,7 @@ class CreateRoutineRequest(BaseModel):
     name: StrictStr
     requirements: StrictStr
     interval: StrictStr
-    data_source: DataSource
-    __properties: ClassVar[List[str]] = ["agent_id", "name", "requirements", "interval", "data_source"]
+    __properties: ClassVar[List[str]] = ["agent_id", "name", "requirements", "interval"]
 
     model_config = {
         "populate_by_name": True,
@@ -73,9 +71,6 @@ class CreateRoutineRequest(BaseModel):
             },
             exclude_none=True,
         )
-        # override the default output from pydantic by calling `to_dict()` of data_source
-        if self.data_source:
-            _dict['data_source'] = self.data_source.to_dict()
         return _dict
 
     @classmethod
@@ -91,8 +86,7 @@ class CreateRoutineRequest(BaseModel):
             "agent_id": obj.get("agent_id"),
             "name": obj.get("name"),
             "requirements": obj.get("requirements"),
-            "interval": obj.get("interval"),
-            "data_source": DataSource.from_dict(obj.get("data_source")) if obj.get("data_source") is not None else None
+            "interval": obj.get("interval")
         })
         return _obj
 

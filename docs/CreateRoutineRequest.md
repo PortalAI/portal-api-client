@@ -8,7 +8,6 @@ Name | Type | Description | Notes
 **name** | **str** |  | 
 **requirements** | **str** |  | 
 **interval** | **str** |  | 
-**data_source** | [**DataSource**](DataSource.md) |  | 
 
 ## Example
 
